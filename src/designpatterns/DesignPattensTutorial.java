@@ -1,4 +1,4 @@
-package designpatterns.creational.singleton;
+package designpatterns;
 
 public class DesignPattensTutorial {
 
