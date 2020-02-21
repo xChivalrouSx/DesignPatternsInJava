@@ -1,8 +1,8 @@
-package designpatterns;
+package designpatterns.creational;
 
 import designpatterns.creational.singleton.SingletonDemo;
 
-public class DesignPattensTutorial {
+public class CreationalDesignPattens {
 
 	public static void main(String args[]) {
 		System.out.println("Application started...");
