@@ -9,6 +9,12 @@ public class SingletonDemo {
 		runDbSingletonExample();
 	}
 	
+	private static void compareObjects(Object firstObject, Object secondObject) {
+		if(firstObject == secondObject) {
+			System.out.println("They are the same instance.");
+		}
+	}
+	
 	private static void runSingletonRuntimeExample() {
 		Runtime singletonRuntime = Runtime.getRuntime();
 		singletonRuntime.gc();
@@ -19,9 +25,7 @@ public class SingletonDemo {
 		
 		System.out.println(otherSingletonRuntime);
 		
-		if(singletonRuntime == otherSingletonRuntime) {
-			System.out.println("They are the same instance.");
-		}
+		compareObjects(singletonRuntime, otherSingletonRuntime);
 	}
 	
 	private static void runDbSingletonExample() {
@@ -33,8 +37,6 @@ public class SingletonDemo {
 		
 		System.out.println(anotherDbSingleton);
 		
-		if(dbSingleton == anotherDbSingleton) {
-			System.out.println("They are the same instance.");
-		}
+		compareObjects(dbSingleton, anotherDbSingleton);
 	}
 }
