@@ -6,6 +6,7 @@ public class BuilderDemo {
 	
 	public static void run() {
 		runStringBuilderExample();
+		runLunchOrderBuilderExample();
 	}
 	
 	private static void runStringBuilderExample() {
@@ -17,5 +18,17 @@ public class BuilderDemo {
 		builder.append(0);
 		
 		System.out.println(builder.toString());
+	}
+	
+	private static void runLunchOrderBuilderExample() {
+		LunchOrder.Builder lunchOrderBuilder = new LunchOrder.Builder();
+		lunchOrderBuilder.bread("test-bread").condiments("test-condiments").dressing("test-dressing").meat("test-meat");
+		
+		LunchOrder lunchOrder = lunchOrderBuilder.build();
+		
+		System.out.println(lunchOrder.getBread());
+		System.out.println(lunchOrder.getCondiments());
+		System.out.println(lunchOrder.getDressing());
+		System.out.println(lunchOrder.getMeat());
 	}
 }
