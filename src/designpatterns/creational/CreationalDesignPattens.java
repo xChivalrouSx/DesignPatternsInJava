@@ -1,6 +1,7 @@
 package designpatterns.creational;
 
 import designpatterns.creational.builder.BuilderDemo;
+import designpatterns.creational.prototype.PrototypeDemo;
 import designpatterns.creational.singleton.SingletonDemo;
 
 public class CreationalDesignPattens {
@@ -12,6 +13,8 @@ public class CreationalDesignPattens {
 		SingletonDemo.run();
 		System.out.println("-----");
 		BuilderDemo.run();
+		System.out.println("-----");
+		PrototypeDemo.run();
 		System.out.println("-----");
 		
 		System.out.println("Application finished...");
