@@ -7,6 +7,7 @@ public class PrototypeDemo {
 
 	public static void run() {
 		runPrototypeStatementExample();
+		runPrototypeItemExample();
 	}
 	
 	private static void runPrototypeStatementExample() {
@@ -26,5 +27,24 @@ public class PrototypeDemo {
 		System.out.println(secondStatement.getSql());
 		System.out.println(secondStatement.getParameters());
 		System.out.println(secondStatement.getRecord());
+	}
+	
+	private static void runPrototypeItemExample() {
+		Registry registry = new Registry();
+		MovieItem movieItem = (MovieItem) registry.createItem("Movie");
+		movieItem.setTitle("Prototype Movie");
+		
+		System.out.println(movieItem);
+		System.out.println(movieItem.getRuntime());
+		System.out.println(movieItem.getTitle());
+		System.out.println(movieItem.getUrl());
+		
+		MovieItem anotherMovieItem = (MovieItem) registry.createItem("Movie");
+		anotherMovieItem.setTitle("Prototype Another Movie");
+		
+		System.out.println(anotherMovieItem);
+		System.out.println(anotherMovieItem.getRuntime());
+		System.out.println(anotherMovieItem.getTitle());
+		System.out.println(anotherMovieItem.getUrl());
 	}
 }
