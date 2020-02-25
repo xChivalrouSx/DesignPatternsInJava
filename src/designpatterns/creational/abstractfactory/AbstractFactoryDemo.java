@@ -15,6 +15,7 @@ public class AbstractFactoryDemo {
 	public static void run() {
 		try {
 			runAbstractFactoryDocumentBuilderExample();
+			runAbstractFactoryCreditCardExample();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -31,5 +32,17 @@ public class AbstractFactoryDemo {
 		System.out.println("Root Element : " + doc.getDocumentElement().getNodeName());
 		System.out.println(abstractFactory.getClass());
 		System.out.println(factory.getClass());
+	}
+	
+	private static void runAbstractFactoryCreditCardExample() {
+		CreditCardFactory abstractFactory = CreditCardFactory.getCreditCardFactory(775);
+		CreditCard card = abstractFactory.getCreditCard(CardType.PLATINUM);
+		
+		System.out.println(card.getClass());
+		
+		abstractFactory = CreditCardFactory.getCreditCardFactory(600);
+		CreditCard anotherCard = abstractFactory.getCreditCard(CardType.GOLD);
+		
+		System.out.println(anotherCard.getClass());
 	}
 }
