@@ -1,5 +1,6 @@
 package designpatterns.creational;
 
+import designpatterns.creational.abstractfactory.AbstractFactoryDemo;
 import designpatterns.creational.builder.BuilderDemo;
 import designpatterns.creational.factory.FactoryDemo;
 import designpatterns.creational.prototype.PrototypeDemo;
@@ -18,6 +19,8 @@ public class CreationalDesignPattens {
 		PrototypeDemo.run();
 		System.out.println("-----");
 		FactoryDemo.run();
+		System.out.println("-----");
+		AbstractFactoryDemo.run();
 		System.out.println("-----");
 		
 		System.out.println("Application finished...");
