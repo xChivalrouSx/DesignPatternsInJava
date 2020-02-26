@@ -6,11 +6,9 @@ import designpatterns.creational.factory.FactoryDemo;
 import designpatterns.creational.prototype.PrototypeDemo;
 import designpatterns.creational.singleton.SingletonDemo;
 
-public class CreationalDesignPattens {
+public class CreationalDesignPatterns {
 
-	public static void main(String args[]) {
-		System.out.println("Application started...");
-		
+	public static void runCreationalDesignPatterns() {
 		System.out.println("-----");
 		SingletonDemo.run();
 		System.out.println("-----");
@@ -22,7 +20,5 @@ public class CreationalDesignPattens {
 		System.out.println("-----");
 		AbstractFactoryDemo.run();
 		System.out.println("-----");
-		
-		System.out.println("Application finished...");
 	}
 }
