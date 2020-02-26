@@ -9,6 +9,7 @@ public class AdapterDemo {
 	
 	public static void run() {
 		runArraysAsListExample();
+		runEmployeeAdapterExample();
 	}
 	
 	private static void runArraysAsListExample() {
@@ -17,5 +18,13 @@ public class AdapterDemo {
 		
 		System.out.println(array);
 		System.out.println(list);
+	}
+	
+	private static void runEmployeeAdapterExample() {
+		EmployeeClient client = new EmployeeClient();
+		
+		List<Employee> employees = client.getEmployeeList();
+		
+		System.out.println(employees);
 	}
 }
