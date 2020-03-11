@@ -11,6 +11,7 @@ public class BridgeDemo {
 	
 	public static void run() throws SQLException {
 		runJdbcExample();
+		runShapeBridgeExample();
 	}
 	
 	private static void runJdbcExample() throws SQLException {
@@ -40,4 +41,19 @@ public class BridgeDemo {
 			}
 		}
 	}
+	
+	private static void runShapeBridgeExample() {
+		Color blue = new Blue();
+		Color red = new Red();
+		
+		Shape squareBlue = new Square(blue);
+		Shape squareRed = new Square(red);
+		Shape circleRed = new Circle(red);
+		
+		squareBlue.applyColor();
+		squareRed.applyColor();
+		circleRed.applyColor();
+	}
+	
+	
 }
